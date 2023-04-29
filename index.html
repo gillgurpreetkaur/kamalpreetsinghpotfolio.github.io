@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <!-- for responsive making-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--cdn linck-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .boto{
+      transform: translate(0%,-40%);
+    }
+    
+   .fonti a{
+      font-size: 30px;
+      color:#d02259;
+      text-decoration: none;
+      padding: 20px;
+      
+    }
+    .cont-sent{
+    transform: translate(27%,10%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .intro{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    input[type="name"]{
+      width: 70%;
+
+    }
+    input[type="email"]{
+      width: 70%;
+
+    }
+    input[type="text"]{
+      width: 50%;
+      height: 10vh;
+
+    }
+    body {
+      background:black;
+    }
+
+    html {
+      overflow-x: hidden;
+
+    }
+
+    body {
+      overflow-x: hidden;
+
+    }
+
+    .boton {
+      width: 300%;
+      border-radius: 30px;
+      padding-right: 80px;
+      margin-right: 30px;
+
+    }
+
+    .topo {
+      font-size: 30px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    span {
+      color: brown;
+    }
+
+    .preet {
+      background-color: gray;
+    }
+
+    .maindiv img {
+      transition: all linear 0.7s;
+
+    }
+
+    .maindiv {
+      position: relative;
+    }
+
+    .maindiv:hover img {
+      transform: scale(1.1);
+    }
+
+    .maindiv1 img {
+      transition: all linear 0.7s;
+
+    }
+
+    .maindiv1 {
+      position: relative;
+    }
+
+    .maindiv1:hover img {
+      transform: scale(1.1);
+    }
+
+    .maindiv2 img {
+      transition: all linear 0.7s;
+
+    }
+
+    .maindiv2 {
+      position: relative;
+    }
+
+    .maindiv2:hover img {
+      transform: scale(1.1);
+    }
+
+
+    .text-containing {
+      position: absolute;
+      width: 100%;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), #d02259);
+      color: aliceblue;
+      transition: height 0.5s;
+
+    }
+
+    .maindiv:hover .text-containing {
+      height: 100%;
+    }
+
+    .maindiv1:hover .text-containing {
+      height: 100%;
+    }
+
+    .maindiv2:hover .text-containing {
+      height: 100%;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 100px auto;
+    }
+
+    .cont {
+      padding: 10px 50px;
+      position: relative;
+      width: 50%;
+
+      animation: movedown 1s linear forwards;
+      opacity: 0;
+    }
+
+    @keyframes movedown {
+      0% {
+        opacity: 1;
+        transform: translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .cont:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .cont:nth-child(2) {
+      animation-delay: 1s;
+    }
+
+    .cont:nth-child(3) {
+      animation-delay: 2s;
+    }
+
+    .cont:nth-child(4) {
+      animation-delay: 3s;
+    }
+
+    .cont:nth-child(5) {
+      animation-delay: 4s;
+    }
+
+    .cont:nth-child(6) {
+      animation-delay: 5s;
+    }
+
+    .cont:nth-child(7) {
+      animation-delay: 6s;
+    }
+
+    .cont:nth-child(8) {
+      animation-delay: 7s;
+    }
+
+    .text-box {
+      padding: 20px 30px;
+      background: #d02259;
+      border-radius: 6px;
+      position: relative;
+      color: #fff;
+    }
+
+    .left-contain {
+      left: 0;
+    }
+
+    .right-contain {
+      left: 50%;
+    }
+
+    .cont .img {
+      position: absolute;
+      width: 40px;
+      border-radius: 50%;
+      right: -20px;
+      top: 32px;
+      z-index: 10;
+      height: 80px;
+
+    }
+
+    .right-contain img {
+      left: -20px;
+    }
+
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background: #d02259;
+      top: 0;
+      left: 50%;
+      margin-left: -3px;
+      z-index: -1;
+      animation: moveline 6s linear forwards;
+    }
+
+    @keyframes moveline {
+      0% {
+        height: 0;
+      }
+
+      100% {
+        height: 100%;
+      }
+    }
+
+    .left-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 15px solid #d02259;
+      right: -15px;
+
+    }
+
+    .right-container-arrow {
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 28px;
+      z-index: 1;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-right: 15px solid #d02259;
+      left: -15px;
+
+    }
+
+    .navabr ul li{
+      float: left;
+      padding-left: 20px;
+      list-style: none;
+      margin-right: 10px;
+      font-size: 18px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+    }
+    .navabr ul li a{
+      text-decoration: none;
+      color: #d02259;
+    }
+    .tab-links{
+      cursor: pointer;
+      position: relative;
+    }
+    .tab-links::after{
+      content: "";
+      width: 0;
+      height: 3px;
+      background: #d02259;
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      transition: 0.5s;
+    }
+    .tab-links.active-link::after{
+      width: 50%;
+    }
+    .tab-contants{
+      display: none;
+    }
+    .tab-contants.active-tab{
+      display: block;
+    }
+    .formi{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (max-width:600px) {
+      .timeline {
+        margin: 50px auto;
+      }
+
+      .timeline::after {
+        left: 31px;
+      }
+
+      .cont {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+      }
+
+      .text-box {
+        font-size: 13px;
+      }
+
+      .text-box small {
+        margin-bottom: 10px;
+      }
+
+      .right-contain {
+        left: 0;
+      }
+
+      .left-contain img,
+      .right-contain img {
+        left: 10px;
+      }
+
+      .left-container-arrow,
+      .right-container-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+      }
+    }
+  </style>
+  <script>
+  window.onload = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+      theme: "light", // "light1", "light2", "dark1"
+      animationEnabled: true,
+      exportEnabled: true,
+      title: {
+        text: "INTERESTS"
+      },
+      axisX: {
+        margin: 10,
+        labelPlacement: "inside",
+        tickPlacement: "inside"
+      },
+      axisY2: {
+        title: "",
+        titleFontSize: 14,
+        includeZero: true,
+        suffix: "bn"
+      },
+      data: [{
+        type: "bar",
+        axisYType: "secondary",
+        yValueFormatString: "#,###.##bn",
+        indexLabel: "{y}",
+        dataPoints: [
+          { label: "Photography", y: 3.25 },
+          { label: "Travelling", y: 3.32 },
+          { label: "Chess", y: 3.63 },
+          { label: " Reading ", y: 3.72 },
+          { label: " Drawing", y: 3.90 },
+          { label: " Learning", y: 4.32 },
+          
+        ]
+      }]
+    });
+    chart.render();
+      
+    }
+    </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark preet">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand  text-danger topo" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-danger"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-light" href="#aboutsection">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Project
+            </a>
+            <ul class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-light" href="#">Action</a></li>
+              <li><a class="dropdown-item text-light" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link  text-light" href="#servicessection">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-light" href="#Professionsection">Profession</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-light" href="#contactusing">Contect Us</a>
+          </li>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <button type="button" class="btn btn-danger active text-light boton" data-bs-toggle="button"
+            autocomplete="off" aria-pressed="true">Subscribe</button>
+
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="bd-placeholder-img" width="100%" height="600vh"
+        src="WhatsApp Image 2023-04-09 at 10.52.16.jpg"
+        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <p>Hello, My name is</p>
+          <h1>Kamalpreet  <span>Singh</span></h1>
+          <p>I'am a Machanical Engineer</p>
+          <p><a class="btn btn-lg btn-danger" href="#">Let's Talk</a></p>
+        </div>
+      </div>
+    </div>
+    
+   
+  </div>
+
+
+  <div class="container-fluid my-5">
+    <div class="row featurette" id="aboutsection">
+      <div class="col-md-5 order-md-2">
+        <h2 class="featurette-heading text-dark"> </h2>
+        <p class="lead text-light intro">My background is behavior, with diploma in Machanical Engineering.
+          I am Experienced in working with special population.I'm driven by my desire for usability and
+          efficiency,starting with a user-centered approach of understanding people's behaviors.</p>
+         <div class="navabr">
+          <ul>
+            <li><p class="tab-links active-link text-light" onclick="opentab('about')">About</p></li>
+            <li><p class="tab-links text-light" onclick="opentab('skills')">Skills</p></li>
+            <li><p class="tab-links text-light" onclick="opentab('experience')">Experience</p></li>
+          </ul>
+         </div><br>
+
+         <div class="container tab-contants  active-tab text-light"  id="about"><br>
+         <p>I am a mechanical engineer with a passion for designing and developing mechanical systems.I have a strong background in mathematics,physics,and engineering principles and have experience using computer-aided design software and prototyping tools.My interests include energy efficiency,renewable energy and sustainable design. I am eager to apply my skills and knowledge to real-world projects and to continue learning and growing as an engineer.</p>
+         </div><br>
+
+         <div class="tab-contants text-light" id="skills"><br>
+          <ul>
+            <li><span>Excellent</span> communication and management skills</li>
+            <li><span>Excellent</span> decision making skills</li>
+            <li><span>Problem</span> solving skills</li>
+            <li>Quick solving skills</li>
+            <li>Leadership</li>
+            <li>Teamwork</li>
+          </ul>
+         </div>
+         <div class="tab-contants text-light" id="experience">
+          <ul>
+            <li><span>Basics of Industrial Automation(2021)</span></li>
+            <p>Three days online workshop on basics of industrial automation.</p>
+            <li><span>Basics of Industrial Hydraulics(2021)</span></li>
+            <p>Basics industrial hydraulic by Bosch Rexroth center of excellence.</p>
+            <li><span>Autocard Mechanical(2022)</span></li>
+            <p>Completed an online Autodesk software course.</p>
+            <li><span>3D Designing & 3D printing(2022)</span></li>
+            <p>Completed 5 days (30 hours) professional certificate program on "3D designing & 3d printing training and certificate program".</p>
+            <li><span>Arc Welding (2022)</span></li>
+            <p>Skill development program organized by department of mechanical engineering & IIW-PDEU students chapter,school of technoligy,PDEU,Gandhinagar.</p>
+            
+          </ul>
+         
+         </div>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="460"
+          height="500" src="WhatsApp Image 2023-04-14 at 18.08.47.JPG" role="img" aria-label=""
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+        <title>Placeholder</title>
+        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em"></text></svg>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-3" id="Professionsection">
+    <div class="row text-light">
+      <h2>Profession </h2>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="featurette-heading text-dark"> </h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+            src="https://www.yantrallp.com/blog/wp-content/uploads/2022/02/3D-printing.jpg" role="img"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title></title>
+          </svg>
+
+
+          <div class="card-body">
+            <h4 class="mx-4">Additive Manufacturing</h4>
+            <p class="card-text">In additive manufacturing, 3D objects are built by adding material in layer upon layer
+              fashion. Materials ranging from plastics, thermoplastics, ceramics, biochemicals, metals, and concrete can
+              be used for production in this sector. Even work is under process to develop human tissues using additive
+              manufacturing techniques.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary bg-danger text-light">View</button>
+
+              </div>
+              <small class="text-muted"></small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+            src="https://mechanitec.ca/wp-content/uploads/How-to-enable-Dark-Theme-in-SolidWorks-17.png" role="img"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+
+          </svg>
+
+          <div class="card-body">
+            <h4 class="mx-4">Solidworks</h4>
+            <p class="card-text">Solidworks is used to develop mechatronics systems from beginning to end. At the
+              initial stage, the software is used for planning, visual ideation, modeling, feasibility assessment,
+              prototyping, and project management.Solidworks’ numerous customizations make designing considerably
+              simpler and even enjoyable.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary bg-danger text-light">View</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+            src="https://c8.alamy.com/comp/2B2AY4G/set-of-gears-on-a-black-background-3d-vector-illustration-blueprint-style-2B2AY4G.jpg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+
+          </svg>
+
+          <div class="card-body">
+            <h4 class="mx-4">3D Vectors</h4>
+            <p class="card-text"> In engineering mechanics, vectors are used to express quantities that have both a
+              magnitude and a direction. For analysis, many engineering variables including forces, displacements,
+              velocities, and accelerations must be represented as vectors.Vectors are used to represent physical
+              quantities that have a magnitude and direction associated with them.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary bg-danger text-light">View</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container my-3" id="servicessection">
+    <div class="row text-light">
+      <h2>Services</h2>
+
+    </div>
+  </div>
+  <div class="container  my-5">
+    <h2 class="featurette-heading text-dark"> </h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-5">
+      <div class="col">
+        <div class="card shadow-sm  maindiv my-3">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="300"
+            src="https://www.bolton.ac.uk/assets/Uploads/shutterstock-1213477993-1.jpg" role="img"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c">
+            <div class="text-containing">
+              <h3>Machanical Engineers work</h3><br>
+              <p>Machanical Engineers inspection crude oil pump centrifugal types of offshore oil and gas central
+                processing platform.</p>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm  maindiv1 my-3">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="300"
+            src="https://www.wylerindustrial.com/wp-content/uploads/2020/03/AdobeStock_304474910-1024x683.jpeg"
+            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c">
+            <div class="text-containing">
+              <h3>Chilled water pipe system.</h3><br>
+              <p>Mechanical engineer working install chilled water pipe system. Engineer consult discussion with team
+                work for install pipe. </p><br>
+            </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card shadow-sm  maindiv2 my-3">
+          <img class="bd-placeholder-img card-img-top" width="100%" height="300"
+            src="https://www.mtu.edu/mechanical/engineering/images/me-what-is-hero-banner-banner1600.jpg" role="img"
+            aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c">
+            <div class="text-containing">
+              <h3>Repairing car parts in auto repair workshop</h3><br>
+              <p>Industrial plant worker, repairing car parts in auto repair workshop - Mechanical engineer inspecting
+                and adjusting vehicle part - Manufacturing factory, student apprentice and skilled work concept </p><br>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-3">
+      <div class="row text-light">
+        <h2>My Proficiency</h2>
+
+      </div>
+    </div>
+    <div class="timeline  mt-1">
+
+      <div class="cont left-contain">
+        <div></div>
+        <div class="text-box">
+          <h2>AutoCAD </h2>
+          <small>16-Jul-2022</small>
+          <p>AutoCAD's primary purpose in mechanical engineering is to accurately draw both 2D and 3D representations of
+            ideas. Therefore, it is a way of visualizing products before the prototype stage.</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+
+      <div class="cont right-contain">
+        <div class="img">
+
+        </div>
+        <div class="text-box">
+          <h2>Welding</h2>
+          <small>16-Jul-2022</small>
+          <p>Welding is a key part of the production process and can be fundamental to making sure a metal structure
+            being built is fit for purpose. Practical knowledge of welding can, therefore, help a mechanical engineer
+            understand the pitfalls in the production of their design. In turn, this can help them improve their
+            designs.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+
+      <div class="cont  left-contain">
+        <div class="img">
+
+        </div>
+        <div class="text-box">
+          <h2>Solidwark</h2>
+          <small>16-Jul-2022</small>
+          <p>solidwork is CAD software that is used by most of the design engineering world today. It is increasingly
+            more common, as many companies begin to move on from other competitors. SOLIDWORKS is a 3D modeling
+            software, which allows users to create virtually any shape they can imagine and rotate it in 3D.</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+
+      <div class="cont  right-contain">
+        <div class="img">
+
+        </div>
+        <div class="text-box">
+          <h2>3D Printing</h2>
+          <small>19-Aug-2022</small>
+          <p>
+            3D printing, also known as additive manufacturing, is a method of creating a three dimensional object
+            layer-by-layer using a computer created design. 3D printing is an additive process whereby layers of
+            material are built up to create a 3D part.</p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+
+      <div class="cont  left-contain">
+        <div class="img">
+
+        </div>
+        <div class="text-box">
+          <h2>Additive Manufacturing</h2>
+          <small>19-Aug-2022</small>
+          <p>Additive manufacturing (AM) can be described as a technique of blending materials by either fusion,
+            binding, or solidifying materials such as liquid resin and powders. It builds part in a layer-by-layer
+            fashion using 3D CAD modeling.</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+    </div>
+  
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+       <div class="container cont-sent">
+        <div class="row my-4 text-light">
+          <h2>Contact Me</h2>
+
+        </div>
+
+       </div>
+<div class="container formi my-4 text-light" id="contactusing">
+    <form class="row gx-0">
+      <div class="col-md-4">
+        <label for="inputEmail4" class="form-label">Name</label>
+        <input type="name" class="form-control" id="inputEmail4" placeholder="Name">
+      </div>
+      <div class="col-md-4">
+        <label for="inputPassword4" class="form-label">Email-id</label>
+        <input type="email" class="form-control" id="inputPassword4" placeholder="Email-id">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Your Message</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Enter your message">
+      </div>
+      <div class="container">
+        <div class="row fonti">
+         <a href="linkedin.com/in/mrkamalpreet"> <i class="fa fa-linkedin-square" aria-hidden="true"></i> <i class="fa fa-telegram" aria-hidden="true"></i>     <i class="fa fa-twitter-square" aria-hidden="true"></i>  <i class="fa fa-phone-square" aria-hidden="true"></i> </a>
+
+        
+
+        </div>
+      </div>
+      <div class="col-12 boto">
+        <button type="submit" class="btn btn-danger">Sign in</button>
+      </div>
+      
+
+    </form>
+  </div>
+    <!--scripting tags-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+
+
+      <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontants=document.getElementsByClassName("tab-contants");
+        function opentab(tabname){
+         for(tablink of tablinks){
+           tablink.classList.remove("active-link");
+   
+         }
+         for(tabcontant of tabcontants){
+           tabcontant.classList.remove("active-tab");
+   
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+   
+        }
+     </script>
+</body>
+
+</html>
